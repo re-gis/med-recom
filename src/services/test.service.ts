@@ -6,14 +6,6 @@ dotenv();
 
 export default class TestService {
   static async fetchTests(query: string) {
-    const url = `${SNOMED_CT_API_URL}/${EDITION}/${VERSION}/concepts?term=${encodeURIComponent(
-      query
-    )}&activeFilter=true&offset=0&limit=50`;
-    const response = await axios.get(url);
-    return response.data;
-  }
-
-  static async fetchTestsFromFHIR(query: string) {
     const username = "dregis";
     const password = "0786430853Dmc!";
     const credentials = Buffer.from(`${username}:${password}`).toString(
