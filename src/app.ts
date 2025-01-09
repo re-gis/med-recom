@@ -11,7 +11,7 @@ export const app = (PORT: number) => {
 
     app.use(
       cors({
-        origin: "*",
+        origin: "https://med-recom-client-iota.vercel.app",
       })
     );
     app.use(bodyparser.json());
